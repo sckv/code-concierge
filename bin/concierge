@@ -2,7 +2,7 @@
 
 'use strict';
 try {
-  require('../src/adder')();
+  require('../src/concierge')();
 } catch (e) {
   console.error(`Creating new files didn't go well: ${e.message}`);
 }

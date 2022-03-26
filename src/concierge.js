@@ -29,6 +29,29 @@ const doSetup = () => {
     fs.copyFileSync(path.join(__dirname, '..', 'templates', file), filePath);
     console.log(`${file} created`);
   });
+
+  const packageJson = require(path.join(resolvedDir, 'package.json'));
+
+  const newPackageJson = {
+    ...packageJson,
+    scripts: {
+      ...packageJson.scripts,
+      lint: 'eslint ./src',
+      'lint:fix': 'eslint ./src --fix',
+      prettify: 'prettier --write "./src/**/*.{ts,tsx}"',
+      test: 'jest --runInBand --coverage',
+      'test:watch': 'jest --runInBand --watch',
+    },
+  };
+
+  fs.writeFileSync(
+    path.join(resolvedDir, 'package.json'),
+    JSON.stringify(newPackageJson, null, 2),
+    { flag: 'w' },
+  );
+
+  console.log(`package.json edited`);
+  console.log('Done!');
 };
 
 module.exports = doSetup;

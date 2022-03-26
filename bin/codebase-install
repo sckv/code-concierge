@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+'use strict';
+try {
+  require('../src/adder')();
+} catch (e) {
+  console.error(`Creating new files didn't go well: ${e.message}`);
+}

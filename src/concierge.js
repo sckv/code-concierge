@@ -5,7 +5,7 @@ const projectDir = process.cwd();
 const resolvedDir = path.resolve(projectDir);
 
 const setupMessage = 'To initialize your project configuration, run --setup or -s';
-const fileList = fs.readdirSync(path.join(__dirname, '..', 'templates'));
+const fileList = fs.readdirSync(path.join(__dirname, 'templates'));
 
 const doSetup = () => {
   const hasHelp = process.argv.find((arg) => arg === '--help' || arg === '-h');
@@ -26,7 +26,7 @@ const doSetup = () => {
       console.log(`${file} already exists`);
       return;
     }
-    fs.copyFileSync(path.join(__dirname, '..', 'templates', file), filePath);
+    fs.copyFileSync(path.join(__dirname, 'templates', file), filePath);
     console.log(`${file} created`);
   });
 

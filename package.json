@@ -1,6 +1,6 @@
 {
   "name": "code-concierge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "author": "Konstantin Knyazev <konstantinkyazevsc@gmail.com>",
   "license": "MIT",

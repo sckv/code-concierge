@@ -4,6 +4,13 @@
   "main": "src/index.js",
   "author": "Konstantin Knyazev <konstantinkyazevsc@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sckv/code-concierge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sckv/code-concierge/issues"
+  },
   "keywords": [
     "nodejs",
     "setup",

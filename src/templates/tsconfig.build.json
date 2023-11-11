@@ -1,7 +1,9 @@
 {
-  "extends": "code-concierge/src/settings/tsconfig.build.json",  
+  "extends": "code-concierge/src/settings/tsconfig.json",
   "compilerOptions": {
+    "outDir": "./lib",
     "typeRoots": ["./node_modules/@types", "@types/**/*"]
   },
   "include": ["src"],
+  "exclude": ["**/__tests__/**", "**/*.test.ts"]
 }

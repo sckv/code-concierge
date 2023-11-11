@@ -36,9 +36,13 @@ const doSetup = () => {
     ...packageJson,
     scripts: {
       ...packageJson.scripts,
+      build: 'rm -rf ./lib && tsc -p tsconfig.build.json',
+      dev: 'ts-node ./src/index.ts',
+      'dev:watch': 'ts-node-dev ./src/index.ts',
       lint: 'eslint ./src',
       'lint:fix': 'eslint ./src --fix',
       prettify: 'prettier --write "./src/**/*.{ts,tsx}"',
+      release: 'semantic-release -e ./.releaserc.json',
       test: 'jest --runInBand --coverage',
       'test:watch': 'jest --runInBand --watch',
     },
